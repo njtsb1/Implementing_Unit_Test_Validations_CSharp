@@ -62,9 +62,9 @@ Validates boundary criteria, existence checks, and termination predicates on str
 | Class | Test Method | Expected Outcome |
 | :--- | :--- | :--- |
 | StringValidationsTests | ShouldReturnCountOf6ForWordMatrix | When passed the text string "Matrix", it must return the integer value 6, matching the string length. |
-| StringValidationsTests | ShouldFindTheWordQualquerInText | When supplied with the sentence "Esse é um texto qualquer" and searching for "qualquer", it must evaluate to true. |
-| StringValidationsTests | ShouldNotFindTheWordTesteInText | When supplied with the sentence "Esse é um texto qualquer" and searching for "teste", it must evaluate to false. |
-| StringValidationsTests | TextShouldEndWithSearchedWord | When supplied with the sentence "Começo, meio e fim do texto procurado" and searching for "procurado", it must evaluate to true. |
+| StringValidationsTests | ShouldFindTheWordQualquerInText | When supplied with the sentence "This is just some random text" and searching for "any", it must evaluate to true. |
+| StringValidationsTests | ShouldNotFindTheWordTesteInText | When supplied with the sentence "This is just some random text" and searching for "test", it must evaluate to false. |
+| StringValidationsTests | TextShouldEndWithSearchedWord | When supplied with the sentence "Beginning, middle, and end of the searched text" and searching for "searched", it must evaluate to true. |
 
 ## Technical Stack & Execution
 
