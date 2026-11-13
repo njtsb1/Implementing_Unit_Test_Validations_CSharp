@@ -140,19 +140,19 @@ const unitTests = {
       run: () => StringValidations.returnCharacterCount("Matrix") === 6
     },
     {
-      name: "ShouldFindTheWordQualquerInText",
-      desc: 'Text: "Esse é um texto qualquer", Search: "qualquer" → Expected: true',
-      run: () => StringValidations.containsCharacter("Esse é um texto qualquer", "qualquer") === true
+      name: "ShouldFindTheWordRandomInText",
+      desc: 'Text: "This is just some random text", Search: "random" → Expected: true',
+      run: () => StringValidations.containsCharacter("This is just some random text", "random") === true
     },
     {
       name: "ShouldNotFindTheWordTesteInText",
-      desc: 'Text: "Esse é um texto qualquer", Search: "teste" → Expected: false',
-      run: () => StringValidations.containsCharacter("Esse é um texto qualquer", "teste") === false
+      desc: 'Text: "This is just some random text", Search: "teste" → Expected: false',
+      run: () => StringValidations.containsCharacter("This is just some random text", "teste") === false
     },
     {
       name: "TextShouldEndWithSearchedWord",
-      desc: 'Text: "Começo, meio e fim do texto procurado", End: "procurado" → Expected: true',
-      run: () => StringValidations.textEndsWith("Começo, meio e fim do texto procurado", "procurado") === true
+      desc: 'Text: "Beginning, middle, and end of the searched text", End: "searched" → Expected: false',
+      run: () => StringValidations.textEndsWith("Beginning, middle, and end of the searched text", "searched") === false
     }
   ]
 };
