@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en-US" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Interactive front-end showcase for C# xUnit Validations project.">
+  <title>Unit Test Validations | C# & xUnit Showcase</title>
+  <link rel="stylesheet" href="./src/style.css">
+</head>
+<body>
+  <header class="app-header" role="banner">
+    <div class="container header-content">
+      <div class="brand">
+        <span class="badge">C# / .NET 6.0</span>
+        <h1 data-i18n="title">Unit Test Validations</h1>
+      </div>
+
+      <nav class="controls" aria-label="Interface Settings">
+        <div class="control-group">
+          <label for="lang-select" class="sr-only" data-i18n="langLabel">Select Language</label>
+          <select id="lang-select" aria-label="Language Selector">
+            <option value="en-US" selected>EN-US</option>
+            <option value="pt-BR">PT-BR</option>
+            <option value="es-ES">ES-ES</option>
+          </select>
+        </div>
+
+        <button id="theme-toggle" type="button" class="icon-btn" aria-label="Switch to Light Mode" title="Toggle Theme">
+          <!-- Sun Icon (shown in Dark Mode to switch to Light) -->
+          <svg id="icon-sun" xmlns="http://w3.org" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <!-- Moon Icon (shown in Light Mode to switch to Dark) -->
+          <svg id="icon-moon" class="hidden" xmlns="http://w3.org" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" role="main">
+    <section class="intro-banner" aria-labelledby="intro-heading">
+      <h2 id="intro-heading" data-i18n="subtitle">xUnit Visual Test Runner & Interactive Sandbox</h2>
+      <p data-i18n="description">
+        Simulate the 10 automated unit tests implemented in C# or test custom inputs against ListValidations and StringValidations services.
+      </p>
+      <div class="action-bar">
+        <button id="run-all-btn" type="button" class="btn-primary" data-i18n="runAllBtn">Run All 10 xUnit Tests</button>
+        <span id="test-summary" class="summary-badge" role="status" aria-live="polite">Ready (0/10 Passed)</span>
+      </div>
+    </section>
+
+    <div class="grid-layout">
+      <!-- ListValidations Section -->
+      <section class="card" aria-labelledby="list-section-title">
+        <header class="card-header">
+          <h3 id="list-section-title">ListValidations.cs</h3>
+          <span class="tag">6 Tests</span>
+        </header>
+
+        <div class="sandbox">
+          <label for="list-input" data-i18n="listInputLabel">Integer Array (comma-separated):</label>
+          <input type="text" id="list-input" value="5, -1, -8, 9" aria-describedby="list-help">
+          <small id="list-help" data-i18n="listHelp">Default dataset from ListValidationsTests.cs</small>
+
+          <div class="sandbox-row">
+            <div>
+              <label for="list-param" data-i18n="paramLabel">Search / Multiplier Number:</label>
+              <input type="number" id="list-param" value="2">
+            </div>
+            <button id="eval-list-btn" type="button" class="btn-secondary" data-i18n="evaluateBtn">Evaluate Custom</button>
+          </div>
+          <div id="list-custom-output" class="output-box" role="region" aria-live="polite"></div>
+        </div>
+
+        <ul id="list-tests-container" class="test-list" aria-label="List Validation Unit Tests"></ul>
+      </section>
+
+      <!-- StringValidations Section -->
+      <section class="card" aria-labelledby="string-section-title">
+        <header class="card-header">
+          <h3 id="string-section-title">StringValidations.cs</h3>
+          <span class="tag">4 Tests</span>
+        </header>
+
+        <div class="sandbox">
+          <label for="string-input" data-i18n="stringInputLabel">Target Text:</label>
+          <input type="text" id="string-input" value="Esse é um texto qualquer" aria-describedby="string-help">
+          <small id="string-help" data-i18n="stringHelp">Test character count, contains, and endsWith</small>
+
+          <div class="sandbox-row">
+            <div>
+              <label for="string-param" data-i18n="searchSubLabel">Substring to Search:</label>
+              <input type="text" id="string-param" value="qualquer">
+            </div>
+            <button id="eval-string-btn" type="button" class="btn-secondary" data-i18n="evaluateBtn">Evaluate Custom</button>
+          </div>
+          <div id="string-custom-output" class="output-box" role="region" aria-live="polite"></div>
+        </div>
+
+        <ul id="string-tests-container" class="test-list" aria-label="String Validation Unit Tests"></ul>
+      </section>
+    </div>
+  </main>
+
+  <footer class="app-footer" role="contentinfo">
+    <div class="container">
+      <p data-i18n="footerText">WEX - .NET Development & QA | C# Backend + Accessible Web Showcase</p>
+    </div>
+  </footer>
+
+  <script src="./src/script.js"></script>
+</body>
+</html>
