@@ -1,0 +1,27 @@
+## Core build outputs
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+bin/
+obj/
+
+## IDE and Source Control metadata
+.vs/
+.vscode/
+*.user
+*.suo
+*.userprefs
+*.sln.docstates
+
+## Test results and coverage tools
+[Tt]est[Rr]esult*/
+*.coverage
+coverage*.json
+coverage*.xml
+coverage*.info
+
+## OS and Web environment files
+.DS_Store
+Thumbs.db
+node_modules/
