@@ -119,8 +119,8 @@ const unitTests = {
     },
     {
       name: "ShouldMultiplyListElementsBy2",
-      desc: "Input:, Factor: 2 → Expected: [10, 14, 16, 18]",
-      run: () => JSON.stringify(ListValidations.multiplyListNumbers([5, 7, 8, 9], 2)) === JSON.stringify([10, 14, 16, 18])
+      desc: "Input: [5, -1, -8, 9], Factor: 2 → Expected: [10, -2, -16, 18]",
+      run: () => JSON.stringify(ListValidations.multiplyListNumbers([5, -1, -8, 9], 2)) === JSON.stringify([10, -2, -16, 18])
     },
     {
       name: "ShouldReturn9AsLargestNumberInList",
