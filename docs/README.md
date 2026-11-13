@@ -33,4 +33,6 @@ This project combines a robust **C# / .NET 6.0** backend tested with **xUnit** a
 2. **Frontend Showcase**:
    Open `index.html` directly in any modern web browser or serve it using VS Code Live Server.
 
+![Screenshot web demo](assets/Screenshot_web_demo.png)
+
 [LICENSE](./LICENSE)
